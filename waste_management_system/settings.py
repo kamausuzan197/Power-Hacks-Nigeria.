@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-u15v(0j)f82e-wfp*p)&v_nv#a9dvoo8dg@ffz0tuksdv84-@2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['power-hacks-nigeria2waste-management.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS','127.0.0.1').split(',')
+
 
 
 # Application definition
